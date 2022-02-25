@@ -4,11 +4,13 @@ const wordArea = document.querySelector("#word");
 
 //---------------------------------------
 
+let rank = 0;
+
 const placeWords = () => {
   for (let i = 0; i < 10; i += 1) {
     let word = createWordObject(
       arrKey[i], // word
-      arrVal[i] / 7, // freq
+      arrVal[i], // freq
       90
     );
 
@@ -69,7 +71,7 @@ formBox.addEventListener("submit", (event) => {
 
           var index_v = 0;
           for (i of Object.values(parseJsonToObject)) {
-            arrVal[index_v] = i;
+            arrVal[index_v] = i / 7;
             index_v++;
             if (index_v == 20) {
               break;
@@ -105,53 +107,64 @@ formBox.addEventListener("submit", (event) => {
   }, 500);
 });
 
+
 // div(word) 생성 메소드
 const createWordObject = (word, freq, rotate) => {
+
+  // console.log(rank, "ddddddddddddddddddddddddddddd");
   const a = Math.floor(Math.random() * 250);
   const b = Math.floor(Math.random() * 300);
-
+  
   const wordContainer = document.createElement("div");
-
+  
   wordContainer.style.display = "flex";
   wordContainer.style.left = "'" + b + "px'";
   wordContainer.style.top = "'" + a + "px'";
   wordContainer.style.fontSize = freq * 5 + "px";
-
+  
   wordContainer.appendChild(document.createTextNode(word));
   
-  if (freq > 0 && freq < 2) {
+  // console.log(rank, "ddddddddddddddddddddddddddddd");
+  if (rank === 10) {
     wordContainer.style.color = "white";
-    wordContainer.style.width = freq * 20 + "px";
-    wordContainer.style.height = freq * 5 + "px";
-  } else if (freq >= 2 && freq < 5) {
-    wordContainer.style.color = "rgb(255, 214, 214)"; // 신설
-    wordContainer.style.width = freq * 20 + "px";
-    wordContainer.style.height = freq * 5 + "px";
-    wordContainer.style.alignItems = "center";
-    wordContainer.style.transform = "translate(-400px, 70px)";
-  } else if (freq >= 5 && freq < 10) {
-    //대통령
-    wordContainer.style.color = "rgb(241, 173, 173)";
-    wordContainer.style.width = freq * 25 + "px";
-    wordContainer.style.height = freq * 5 + "px";
-    wordContainer.style.alignItems = "center";
-    wordContainer.style.transform = "translate(-190px, 130px)";
-  } else if (freq >= 10 && freq < 15) {
-    wordContainer.style.color = "rgb(229, 143, 143)";
-    wordContainer.style.width = freq * 20 + "px";
-    wordContainer.style.height = freq * 5 + "px";
-  } else if (freq >= 15 && freq < 20) {
-    wordContainer.style.color = "rgb(228, 109, 109)";
-    wordContainer.style.transform = "rotate(" + rotate + "deg)";
-    wordContainer.style.width = freq * 20 + "px";
-    wordContainer.style.height = freq * 5 + "px";
-    wordContainer.style.alignItems = "baseline";
-  } else {
-    wordContainer.style.color = "rgb(219, 59, 59)";
-    wordContainer.style.width = freq * 20 + "px";
+    wordContainer.style.width = freq * 30 + "px";
     wordContainer.style.height = freq * 5 + "px";
     wordContainer.style.justifyContent = "right";
+    
+    
+  } else if (rank > 10 && rank <13) {
+    //대통령
+    
+    wordContainer.style.transform = "rotate(" + rotate + "deg)";
+    wordContainer.style.color = "rgb(255, 255, 255, 0.781)";
+    wordContainer.style.width = freq * 30 + "px";
+    wordContainer.style.height = freq * 5 + "px";
+    wordContainer.style.alignItems = "baseline";
+    
+    
+  } else if (rank >=13 && rank <=15 ) {
+    
+    
+    wordContainer.style.color = "rgb(255, 255, 255, 0.5)";
+    wordContainer.style.width = freq * 35 + "px";
+    wordContainer.style.height = freq * 5 + "px";
+    wordContainer.style.alignItems = "center";
+    wordContainer.style.transform = "translate(-500px, 130px)";
+    
+  } else if (rank >15 && rank <=18) {
+    
+    wordContainer.style.transform = "translate(-450px, 100px)";
+    wordContainer.style.color = "rgb(255, 255, 255, 0.6)";
+    wordContainer.style.width = freq * 30 + "px";
+    wordContainer.style.height = freq * 5 + "px";
+  } else {
+    
+    wordContainer.style.color = "rgb(255, 255, 255, 0.4)"; // 신설
+    wordContainer.style.width = freq * 30 + "px";
+    wordContainer.style.height = freq * 5 + "px";
+    wordContainer.style.alignItems = "center";
+    wordContainer.style.transform = "translate(-400px, 150px)";
   }
-
+  rank++;
   return wordContainer;
 };
