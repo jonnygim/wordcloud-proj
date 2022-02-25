@@ -8,7 +8,7 @@ const placeWords = () => {
   for (let i = 0; i < 10; i += 1) {
     let word = createWordObject(
       arrKey[i], // word
-      arrVal[i], // freq
+      arrVal[i] / 7, // freq
       90
     );
 
@@ -121,6 +121,8 @@ const createWordObject = (word, freq, rotate) => {
   
   if (freq > 0 && freq < 2) {
     wordContainer.style.color = "white";
+    wordContainer.style.width = freq * 20 + "px";
+    wordContainer.style.height = freq * 5 + "px";
   } else if (freq >= 2 && freq < 5) {
     wordContainer.style.color = "rgb(255, 214, 214)"; // 신설
     wordContainer.style.width = freq * 20 + "px";
@@ -130,7 +132,7 @@ const createWordObject = (word, freq, rotate) => {
   } else if (freq >= 5 && freq < 10) {
     //대통령
     wordContainer.style.color = "rgb(241, 173, 173)";
-    wordContainer.style.width = freq * 20 + "px";
+    wordContainer.style.width = freq * 25 + "px";
     wordContainer.style.height = freq * 5 + "px";
     wordContainer.style.alignItems = "center";
     wordContainer.style.transform = "translate(-190px, 130px)";

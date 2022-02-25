@@ -38,7 +38,7 @@ app.post("/news", (req, res) => {
 
   const { text:query} = req.body;
 
-  const url = "https://openapi.naver.com/v1/search/news.json?query=" + encodeURI(query) + "&display=10&start=1&sort=sim";
+  const url = "https://openapi.naver.com/v1/search/news.json?query=" + encodeURI(query) + "&display=100&start=1&sort=sim";
   //  + encodeURI(query) + "&display=10&start=1&sort=sim";
   
   const options = {
