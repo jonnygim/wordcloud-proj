@@ -1,0 +1,73 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.back {
+  width: 100%;
+  height: 990px;
+  background-image: url("images/2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  height: 40vh;
+  /* border:  2px dashed black; */
+  margin-top: 190px;
+}
+
+/* .container:before {
+  position: relative;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(202, 197, 197, 0.534); 
+} */
+
+/* form tag */
+form.box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+form.box h1 {
+  font-weight: normal;
+}
+
+form.box input {
+  border: none;
+}
+
+form.box input[type=text] {
+  background-color: rgba(255, 255, 255, 0.26);
+  width: 340px;
+  padding: 10px;
+  border-radius: 25px 0 0 25px;
+}
+
+form.box input[type=submit] {
+  width: 90px;
+  background-color: rgba(105, 115, 146, 0.616);
+  padding: 10px;
+  border-radius: 0 25px 25px 0;
+  color: white;
+  margin-left: -6px;
+}
+
+form.box input[type=text]::placeholder {
+  color: rgb(87, 87, 87);
+}
+
