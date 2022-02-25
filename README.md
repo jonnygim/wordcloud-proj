@@ -1,4 +1,4 @@
-## 형태소 분석을 통한 키워드 추출 검색 엔진
+## 형태소 분석을 통한 키워드 추출 검색 엔진🚀
 
 실행 화면
 
@@ -10,7 +10,9 @@
 3. 실행 결과
    ![image](https://user-images.githubusercontent.com/26592315/155640999-d3ac879e-6ebe-49ac-af95-19b2d7154004.png)
 
-# wordcloud-backend
+---
+
+## wordcloud-backend
 
 1. 사용한 npm list
 
@@ -32,3 +34,25 @@
 3. 참고
 
 #### [KoalaNLP](https://github.com/koalanlp/nodejs-support)
+
+---
+
+## 개선점
+
+1. github 저장소 정리
+2. 결과 값이 3글자면 늘어지는 부분
+3. 한번 검색하면 다시 재 검색 안되는 부분.
+4. 데이터 별로 접근해서 front에서 조정해야 함.
+5. 코드 정리 후 Lighthouse로 코드 개선하기.
+
+---
+
+## 팀 구성원
+
+frontend:
+
+김종원, 정지현
+
+backend:
+
+손현오, 김진주
