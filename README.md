@@ -17,6 +17,8 @@
 | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | ![html](https://user-images.githubusercontent.com/26592315/155648679-2bb5cba7-6f74-4f5c-a25a-1eb2adb80953.png)HTML | ![css](https://user-images.githubusercontent.com/26592315/155648681-bcbe82bd-f25a-4d4c-8aa0-d85651c2769f.png) CSS | ![javascript](https://user-images.githubusercontent.com/26592315/155648740-abbf6915-e760-4a4a-860a-9bf0ff4c02b4.png) JavaScript | [Naver 오픈 api(검색 api)](https://developers.naver.com/docs/serviceapi/search/news/news.md#%EB%89%B4%EC%8A%A4) |
 
+</br>
+
 - 프로그램 실행 화면
 
 1. < 시작 화면 >
@@ -28,6 +30,8 @@
    ![image](https://user-images.githubusercontent.com/26592315/155640999-d3ac879e-6ebe-49ac-af95-19b2d7154004.png)
 
 ---
+
+</br>
 
 ## wordcloud-backend
 
